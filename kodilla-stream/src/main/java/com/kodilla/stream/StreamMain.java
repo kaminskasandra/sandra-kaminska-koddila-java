@@ -1,15 +1,22 @@
 package com.kodilla.stream;
 
-import com.kodilla.stream.beautifier.PoemBeautifier;
-import com.kodilla.stream.iterate.NumbersGenerator;
-import com.kodilla.stream.lambda.*;
-import com.kodilla.stream.reference.FunctionalCalculator;
-import static java.awt.SystemColor.text;
+import com.kodilla.stream.forumuser.Forum;
+import com.kodilla.stream.forumuser.ForumUser;
+import java.util.stream.Collectors;
+
+import static java.util.Locale.filter;
+
 public class StreamMain {
 
     public static void main(String[] args) {
 
-        System.out.println("Using Stream to generate even numbers from 1 to 20");
-        NumbersGenerator.generateEven(20);
+        Forum forum = new Forum();
+        String theResultStringOfUsers = forum.getList().stream()
+                .filter(u -> u.getSex() == 'M')
+                .filter(u -> u.getBirthDate().getYear() < 2003)
+                .filter(u -> u.getNumberOfPublishedPosts() >= 1)
+                .collect(Collectors.toMap(ForumUser::getUserId, u -> u)).toString();
+
+        System.out.println(theResultStringOfUsers);
     }
 }

@@ -6,11 +6,12 @@ public class ArrayOperationsTestSuite {
     @Test
     void testGetAverage(){
         //Given
-        int[] numbersForTest = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+        int[] numbersForTest = {4,5,8,10,3,11,7,8,4,9,1,15,3,10,12,17,7,8,1,2};
 
         //When
-       double result = ArrayOperations.getAverage(numbersForTest);
+       double averageResult = ArrayOperations.getAverage(numbersForTest);
+
         //Then
-        assertEquals(10.5, result);
+        assertEquals(7.25, averageResult);
     }
 }

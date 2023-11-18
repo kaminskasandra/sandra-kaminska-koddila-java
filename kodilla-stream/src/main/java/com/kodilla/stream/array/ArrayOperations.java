@@ -5,14 +5,16 @@ import java.util.OptionalDouble;
 import java.util.stream.IntStream;
 
 public interface ArrayOperations {
-    int[] numbers = new int[20];
-     static double getAverage(int[] numbers) {
 
-             IntStream.range(1, numbers.length + 1)
-                     .forEach(System.out::println);
+    static double getAverage(int[] numbers) {
 
-         OptionalDouble result = IntStream.range(1, numbers.length + 1)
-                 .average();
-         return result.getAsDouble();
-     }
+        IntStream.range(0, numbers.length)
+                .map(n -> numbers[n])
+                .forEach(System.out::println);
+
+        OptionalDouble result = IntStream.range(0, numbers.length)
+                .map(n -> numbers[n])
+                .average();
+        return result.getAsDouble();
+    }
 }

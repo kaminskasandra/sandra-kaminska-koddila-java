@@ -6,7 +6,6 @@ public class GameLogic {
 
     public static void RpsLogic() {
         Scanner scanner = new Scanner(System.in);
-
         boolean end = false;
         String decision;
 

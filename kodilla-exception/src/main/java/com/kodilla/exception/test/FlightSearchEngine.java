@@ -17,7 +17,7 @@ public class FlightSearchEngine {
         if (!arrivalAirportExists) {
             throw new RouteNotFoundException("route not found");
         } else {
-            return arrivalAirportExists;
+            return airPorts.get(flight.getArrivalAirport());
         }
     }
 }

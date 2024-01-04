@@ -1,4 +1,4 @@
-package com.kodilla.patterns.strategy;
+package com.kodilla.patterns.strategy.predictors;
 
 public sealed interface BuyPredictor
         permits AggressivePredictor, BalancedPredictor, ConservativePredictor {

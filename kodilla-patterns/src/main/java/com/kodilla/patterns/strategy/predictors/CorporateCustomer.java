@@ -1,4 +1,4 @@
-package com.kodilla.patterns.strategy;
+package com.kodilla.patterns.strategy.predictors;
 
 public final class CorporateCustomer extends Customer {
 

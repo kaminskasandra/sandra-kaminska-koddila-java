@@ -34,5 +34,6 @@ public final class Board {
                 "name='" + name + '\'' + ",\n" +
                 "taskLists=" + taskLists + "\n" +
                 '}';
+
     }
 }

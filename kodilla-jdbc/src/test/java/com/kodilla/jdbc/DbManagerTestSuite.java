@@ -44,7 +44,6 @@ class DbManagerTestSuite {
 
     @Test
     void testSelectUsersAndPosts() throws SQLException {
-
         //Given
         DbManager dbManager = DbManager.getInstance();
 

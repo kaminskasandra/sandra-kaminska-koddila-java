@@ -4,7 +4,6 @@ import com.kodilla.stream.forumuser.Forum;
 import com.kodilla.stream.forumuser.ForumUser;
 import java.util.stream.Collectors;
 
-import static java.util.Locale.filter;
 
 public class StreamMain {
 

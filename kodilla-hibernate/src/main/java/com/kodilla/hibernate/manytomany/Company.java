@@ -10,8 +10,15 @@ import java.util.List;
                 name = "Company.findByFirstThreeCharacters",
                 query = "SELECT * FROM COMPANIES WHERE SUBSTRING(COMPANY_NAME, 1, 3) = :characters",
                 resultClass = Company.class
+        ),
+        @NamedNativeQuery(
+                name = "Company.findCompaniesWithNameLike",
+                query = "SELECT * FROM COMPANIES" +
+                        " WHERE COMPANY_NAME LIKE CONCAT ('%', :COMPANY_NAME, '%')",
+                resultClass = Company.class
         )
 })
+
 @Entity
 @Table(name = "COMPANIES")
 public class Company {

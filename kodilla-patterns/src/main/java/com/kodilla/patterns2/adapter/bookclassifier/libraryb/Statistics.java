@@ -28,3 +28,4 @@ public class Statistics implements BookStatistics {
         return years[years.length / 2];
     }
 }
+

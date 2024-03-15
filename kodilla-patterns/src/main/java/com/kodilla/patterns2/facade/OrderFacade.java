@@ -1,13 +1,15 @@
-package com.kodilla.patterns2.facade.api;
+package com.kodilla.patterns2.facade;
 
-import com.kodilla.patterns2.facade.api.api.ShopService;
+import com.kodilla.patterns2.facade.api.ShopService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 
+@EnableAspectJAutoProxy
 @Service
 public class OrderFacade {
     private static final Logger LOGGER = LoggerFactory.getLogger(OrderFacade.class);
@@ -16,7 +18,7 @@ public class OrderFacade {
     public OrderFacade(ShopService shopService) {
         this.shopService = shopService;
     }
-    public void processOrder(final OrderDto order, final Long userId) throws OrderProcessingException {
+    public void processOrder(OrderDto order, Long userId) throws OrderProcessingException {
         boolean wasError = false;
         Long orderId = shopService.openOrder(userId);
         LOGGER.info("Registering new order, ID: " + orderId);

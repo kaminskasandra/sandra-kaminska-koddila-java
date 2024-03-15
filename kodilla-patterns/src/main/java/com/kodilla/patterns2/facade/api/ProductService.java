@@ -1,4 +1,4 @@
-package com.kodilla.patterns2.facade.api.api;
+package com.kodilla.patterns2.facade.api;
 
 import org.springframework.stereotype.Service;
 

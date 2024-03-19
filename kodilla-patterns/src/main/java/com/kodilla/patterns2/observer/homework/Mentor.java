@@ -14,8 +14,13 @@ public class Mentor implements Observer {
 
     @Override
     public void update(Student student) {
-        System.out.println(name + ": New task from " + student.getStudentName() + "\n" +
-                " (total: " + student.getTasks().size() + " task)");
+        if (student.getTasks().size() == 1) {
+            System.out.println(name + ": New task from " + student.getStudentName() + "\n" +
+                    " (total: " + student.getTasks().size() + " task)");
+        } else {
+            System.out.println(name + ": New task from " + student.getStudentName() + "\n" +
+                    " (total: " + student.getTasks().size() + " tasks)");
+        }
         updateCount++;
     }
 }

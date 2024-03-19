@@ -10,7 +10,7 @@ public class StudentTestSuite {
         //Given
         Mentor mentor1 = new Mentor("Mentor 1");
         Mentor mentor2 = new Mentor("Mentor 2");
-        Student student1 = new Student(mentor1,"Karol");
+        Student student1 = new Student(mentor1, "Karol");
         Student student2 = new Student(mentor2, "Karolina");
         Student student3 = new Student(mentor1, "Mateusz");
         //When
@@ -23,6 +23,5 @@ public class StudentTestSuite {
         //Then
         assertEquals(5, mentor1.getUpdateCount());
         assertEquals(1, mentor2.getUpdateCount());
-
-        }
+    }
 }

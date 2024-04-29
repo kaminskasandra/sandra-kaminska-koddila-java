@@ -15,13 +15,14 @@ public class FacebookTestingApp {
     public static final String XPATH_MONTH = "//select[@id='month']";
     public static final String XPATH_YEAR = "//select[@id='year']";
 
+
     public static void main(String[] args) {
         WebDriver driver = WebDriverConfig.getDriver(WebDriverConfig.FIREFOX);
         driver.get("https://www.facebook.com/");
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 
-        WebElement acceptCookiesButton = driver.findElement(By.xpath("//button[@title='Zezwól na wszystkie pliki cookie']"));
+        WebElement acceptCookiesButton = driver.findElement(By.xpath("  //*[@id=\"u_0_k_+8\"]"));
         if (acceptCookiesButton.isDisplayed()) {
             acceptCookiesButton.click();
         }
